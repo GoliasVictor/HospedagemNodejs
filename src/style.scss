@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;   
+    border-color: var(--Constrat) ; 
+    color:var(--Constrat);
+    background-color: transparent;
+    &:focus{
+        outline: none;
+    }
+}
+:root{
+    font-size: 16px;
+    font-family: monospace;
+    --Bg: #111;
+    --Constrat: #FFF;
+    --Primary: #111;
+    --DarkPrimary: #000; 
+}
+@mixin Borda {
+    border:2px var(--Constrat) solid;
+}
+@mixin FlexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+body{
+    background-color: var(--Bg);
+    color: var(--ConstratPrimary);
+}
+h1{
+    font-size: 1.9em;
+}
+dt{
+    font-weight: bold; 
+    margin-bottom: 0.1em;
+}
+dd{
+    &::before {
+        content: "  ";
+        white-space: pre;
+    }
+}
+#index{
+    @import "index.scss";
+}
+#pessoa{
+    @import "pessoa.scss";
+}

@@ -1,0 +1,27 @@
+body{
+    height: 100vh;
+    @include FlexCenter();
+}
+main{ 
+    width: fit-content;
+    height: min-content;
+}
+#CaixaDeProcura{
+    overflow: hidden;
+    border-radius: 2em;
+    @include Borda();
+}
+#Nome{
+    padding: 0.5em 0  0.5em 1em  ;
+    border:  none;
+    &::-webkit-search-cancel-button{
+        display: none;
+        
+    }
+}
+#BtnProcura{
+    border:  none;
+    vertical-align: middle;
+    font-size:1.4em;
+    margin: 0.3em;
+}

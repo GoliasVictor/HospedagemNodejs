@@ -1,0 +1,36 @@
+{
+  "name": "hospedagemnodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "npm run sass;npm run tsc; node app.js",
+    "dev": "npm run live-sass & npm run live-ts  & npm run live-server ",
+    "sass": "sass src/style.scss public/style/style.css",
+    "tsc": "tsc --project tsconfig.json",
+    "live-server": "nodemon .",
+    "live-sass": "sass -w src/style.scss public/style/style.css",
+    "live-ts": "tsc -w --project tsconfig.json",
+    "test": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sass": "^1.35.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/node": "^15.12.4",
+    "nodemon": "^2.0.7",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.4"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "/public/*",
+      "/src/*"
+    ],
+    "ext": "js,json,ts"
+  }
+}
